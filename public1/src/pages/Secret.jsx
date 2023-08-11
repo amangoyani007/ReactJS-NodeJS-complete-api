@@ -10,7 +10,7 @@ export default function Secret() {
   useEffect(() => {
     const verifyUser = async () => {
       if(!cookie.jwt){
-        navigate("/login");
+        navigate("/");
       }else{
         const { data } = await axios.post("http://127.0.0.1:4000/register",{});
         if(!data.status){
